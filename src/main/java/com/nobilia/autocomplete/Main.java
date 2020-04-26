@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class Ngram {
+public class Main {
 
     private final static Map<Integer, Index> cache = new HashMap<>();
     private static String baseline;
@@ -46,7 +46,7 @@ public class Ngram {
 
     private static String baseline() throws IOException {
         return IOUtils.toString(
-            Objects.requireNonNull(Ngram.class.getClassLoader().getResourceAsStream("baseline.txt")),
+            Objects.requireNonNull(Main.class.getClassLoader().getResourceAsStream("baseline.txt")),
             StandardCharsets.UTF_8.name());
     }
 }
