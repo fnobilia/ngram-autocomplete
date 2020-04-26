@@ -28,7 +28,7 @@ public class Indexer {
         BaselineItem item;
         Map<String, Double> innerItem;
 
-        for (int i = 0; i < words.length - nGramLength; i++) {
+        for (int i = 0; i <= words.length - nGramLength; i++) {
             item = sequence(i, words, nGramLength);
 
             if (index.containsKey(item.getSequence())) {
